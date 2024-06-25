@@ -1,13 +1,141 @@
+/* Reset base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+  scroll-behavior: smooth;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background: linear-gradient(117.04deg, #cfd9df 99.38%, #e2ebf0 99.38%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Navbar */
+.navbar {
+  margin-left: 10px;
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: min-content;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  -webkit-box-shadow: inset 0px 0px 31px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 31px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 31px -3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-elements {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-elements li {
+  margin: 10px 10px 10px 10px;
+  background-color: rgba(0, 0, 0, 0) 55, 255, 255;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.nav-elements li:hover {
+  background-color: rgba(164, 164, 164, 0.189);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-selected {
+  margin: 0px 10px 0px 10px;
+  border-radius: 40px;
+  padding: 10px;
+  transition: .5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+.nav-item.active {
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.0);
+}
+/* Home */
+.sectionHome {
+  background-image: url(./img/bg-sect-home.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom center; 
+  display: flex;
+  justify-content: center;
+}
+
+.homeTitle {
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.54);
+  padding: 20px;
+  width: 100%;
+  letter-spacing: 10px;
+  background: linear-gradient(90deg, #b301c1 0%, #a754ee 100%);
+  box-shadow: 0px 0px 46.5px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 119.5px 119.5px;
+  height: fit-content;
+  padding-bottom: 5vh;
+}
+
+.corpo {
+  text-align: center;
+}
+
+.homeAbout {
+  background-color: white;
+  height: fit-content;
+  margin: auto;
+  margin-top: 15%;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 35px 12px rgba(0, 0, 0, 0.129);
+}
+
+/* About */
+
+.sectionAbout {
+  background-image: url(./img/bg-sect-about.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS media query */
+@media (max-width: 445px) {
+  .homeTitle {
+    width: 100%;
+    letter-spacing: 2px;
+  }
+  .homeTitle h1{
+    font-size: 3vh;
+    margin: 5px;
+  }
+  .homeTitle h3{
+    font-size: 1.5vh;
+    margin: 5px;
+  }
+  .homeAbout{
+    font-size: 3;
+  }
 }
